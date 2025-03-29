@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos de Implantación de Sistemas, SQL y NoSQL</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilos generales */
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+            /* Color de fondo gris claro */
+            color: #333;
+            /* Color de texto predeterminado */
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header {
+            background-color: #e0e0e0;
+            /* Gris un poco más oscuro para el encabezado */
+            color: #333;
+            padding: 1rem 0;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            /* Línea gris inferior */
+        }
+        
+        .container {
+            background-color: #fff;
+            /* Fondo blanco para el contenedor */
+            padding: 2rem;
+            margin: 2rem auto;
+            border: 1px solid #ccc;
+            /* Marco gris */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        /* Estilos para títulos y listas */
+        
+        h1 {
+            color: #2e8b57;
+            border-bottom: 2px solid #2e8b57;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        h1:hover {
+            color: #226442;
+        }
+        
+        h2 {
+            color: #4682b4;
+            margin-top: 2rem;
+            transition: color 0.3s ease;
+        }
+        
+        h2:hover {
+            color: #356994;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        li {
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        li:hover {
+            transform: translateY(-5px);
+        }
+        /* Estilos para imágenes y botones */
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        img:hover {
+            transform: scale(1.05);
+        }
+        
+        .btn-primary {
+            background-color: #ff6347;
+            border-color: #ff6347;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e25241;
+            border-color: #e25241;
+        }
+        /* Estilos para el tablero Kanban */
+        
+        .tablero-kanban {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+        
+        .columna {
+            width: 30%;
+            border: 1px solid #ccc;
+            /* Marco gris para las columnas */
+            padding: 1rem;
+            border-radius: 8px;
+        }
+        
+        .columna h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .kanban-title {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.5em;
+            color: #4682b4;
+        }
+        /* Estilos para el pie de página */
+        
+        .footer {
+            background-color: #e0e0e0;
+            /* Gris un poco más oscuro para el pie de página */
+            color: #333;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid #ccc;
+            /* Línea gris superior */
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="kanban-ppt.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Implantación de Sistemas, SQL y NoSQL</h1>
+    </header>
+
+    <div class="container">
+        <p></p>
+        <div class="row">
+            <div class="col-md-6">
+                <h2 id="implantacion">Implantación de Sistemas</h2>
+                <p>La implantación de sistemas es un proceso crítico que abarca desde la concepción inicial de un sistema hasta su puesta en marcha y mantenimiento continuo. Este proceso se inicia con un profundo análisis de los requisitos del cliente, donde
+                    se identifican y documentan las necesidades específicas del negocio, las funcionalidades requeridas, los niveles de rendimiento esperados y las restricciones técnicas y operativas. Una vez comprendidos los requisitos, se procede al
+                    diseño del sistema, donde se define la arquitectura global, se seleccionan las tecnologías más adecuadas, se diseña la estructura de la base de datos y se planifica la interfaz de usuario. El desarrollo e integración del sistema involucra
+                    la implementación de las funcionalidades mediante la programación, la realización de pruebas exhaustivas y la integración con otros sistemas existentes para garantizar la coherencia y la interoperabilidad. La fase de pruebas y validación
+                    es crucial para asegurar que el sistema cumple con los requisitos establecidos y funciona correctamente en diferentes escenarios. Finalmente, el despliegue y mantenimiento del sistema implica la puesta en marcha en el entorno de producción,
+                    la capacitación de los usuarios finales y el soporte continuo para resolver problemas, realizar actualizaciones y asegurar la evolución del sistema a lo largo del tiempo.</p>
+                <ul>
+                    <li>
+                        <strong>Análisis de Requisitos:</strong>
+                        <p class="section-description">Identificación y documentación de las necesidades del cliente para el nuevo sistema. Incluye la definición de funcionalidades, rendimiento y restricciones.</p>
+                    </li>
+                    <li>
+                        <strong>Diseño del Sistema:</strong>
+                        <p class="section-description">Creación de la arquitectura del sistema, incluyendo la selección de tecnologías, diseño de la base de datos y la interfaz de usuario.</p>
+                    </li>
+                    <li>
+                        <strong>Desarrollo e Integración:</strong>
+                        <p class="section-description">Implementación del sistema, incluyendo la programación, pruebas y la integración con otros sistemas existentes.</p>
+                    </li>
+                    <li>
+                        <strong>Pruebas y Validación:</strong>
+                        <p class="section-description">Verificación del correcto funcionamiento del sistema y validación con los usuarios finales para asegurar que cumple con los requisitos.</p>
+                    </li>
+                    <li>
+                        <strong>Despliegue y Mantenimiento:</strong>
+                        <p class="section-description">Puesta en marcha del sistema en el entorno de producción y soporte continuo para resolver problemas y realizar actualizaciones.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2 id="sql">SQL (Structured Query Language)</h2>
+                <ul>
+                    <li>
+                        <strong>Bases de Datos Relacionales:</strong>
+                        <p class="section-description">Estructura definida con tablas, filas y columnas, donde las relaciones entre tablas se mantienen mediante claves foráneas. Ideal para datos estructurados y transacciones ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad).
+                            Garantiza la integridad y consistencia de los datos, pero puede ser menos flexible para datos no estructurados.</p>
+                        <a href="descarga (4).png" target="_blank">
+                            <img src="descarga (4).png" alt="Bases de Datos Relacionales">
+                        </a>
+                    </li>
+                    <li>
+                        <strong>Consultas SQL:</strong>
+                        <p class="section-description">Lenguaje para manipular y consultar datos en bases de datos relacionales. Permite operaciones complejas con alta precisión, como uniones, agregaciones y subconsultas. Esencial para aplicaciones que requieren análisis de datos precisos
+                            y reportes detallados.</p>
+                        <a href="descarga.png" target="_blank">
+                            <img src="descarga.png" alt="Consultas SQL">
+                        </a>
+                    </li>
+                </ul>
+                <h2 id="nosql">NoSQL (Not Only SQL)</h2>
+                <ul>
+                    <li>
+                        <strong>Bases de Datos No Relacionales:</strong>
+                        <p class="section-description">Flexibilidad para datos no estructurados o semiestructurados, como documentos JSON, pares clave-valor o grafos. Escalabilidad horizontal y alto rendimiento, ideal para aplicaciones con grandes volúmenes de datos y requisitos de
+                            rendimiento exigentes.</p>
+                        <a href="descarga (2).png" target="_blank">
+                            <img src="descarga (2).png" alt="Bases de Datos No Relacionales">
+                        </a>
+                    </li>
+                    <li>
+                        <strong>Tipos de NoSQL:</strong>
+                        <p class="section-description">Clave-valor (Redis, DynamoDB), documento (MongoDB, CouchDB), columna ancha (Cassandra, HBase) y grafo (Neo4j). Cada tipo está adaptado a diferentes necesidades y tipos de datos, ofreciendo flexibilidad y rendimiento optimizado
+                            para casos de uso específicos.</p>
+                        <a href="descarga (1).png" target="_blank">
+                            <img src="descarga (1).png" alt="Tipos de NoSQL">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <p>La elección entre SQL y NoSQL depende de los requisitos específicos del proyecto, como la estructura de los datos, la escalabilidad, el rendimiento y la flexibilidad necesaria.</p>
+        <h2 class="kanban-title">Tabla Kanban</h2>
+        <div class="tablero-kanban">
+            <div class="columna pendiente" data-columna="pendiente">
+                <h2>Pendiente</h2>
+                <div id="pendiente-tareas"></div>
+                <button class="agregar-tarea" data-columna="pendiente">Agregar Tarea</button>
+            </div>
+            <div class="columna progreso" data-columna="progreso">
+                <h2>En Progreso</h2>
+                <div id="progreso-tareas"></div>
+                <button class="agregar-tarea" data-columna="progreso">Agregar Tarea</button>
+            </div>
+            <div class="columna hecho" data-columna="hecho">
+                <h2>Hecho</h2>
+                <div id="hecho-tareas"></div>
+                <button class="agregar-tarea" data-columna="hecho">Agregar Tarea</button>
+            </div>
+        </div>
+        <div class="index-buttons">
+            <a href="#implantacion" class="btn btn-primary">Ir a Implantación de Sistemas</a>
+            <a href="#sql" class="btn btn-primary">Ir a SQL</a>
+            <a href="#nosql" class="btn btn-primary">Ir a NoSQL</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Conceptos de Implantación de Sistemas, SQL y NoSQL</p>
+    </footer>
+
+    <script src="kanban-interactivo.js"></script>
+</body>
+
+</html>
